@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contalick</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            border: 3px solid purple;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        h1 {color: white}
+        p {font-size: 8vh; color: white}
+        section {
+            background:greenyellow;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 5vh
+
+        }
+        
+    </style>
+    </head>
+    <body>
+        <section>
+            <h1>Quantox?</h1>
+            <p id="resultado">0</p>
+            <button onClick="diminuir()">Menosh</button>
+            <button onClick="aumentar()">Mash</button>
+            <button onClick="dobrar()">Dobrar</button>
+            <button onClick="zerar()">Zerar</button>
+        </section>
+        <script>
+            let numero = 0
+            
+            function diminuir() {
+                numero--
+                mostrarNaTela()
+            }
+            function aumentar() {
+                numero++
+                mostrarNaTela()
+                
+            }
+            function dobrar() {
+                numero = numero*2
+                mostrarNaTela()
+            }
+            function zerar() {
+                numero = 0
+                mostrarNaTela()
+            }
+
+            function mostrarNaTela(){
+                const p = document.querySelector("p")
+                p.innerText = numero
+            }
+            mostrarNaTela()
+        </script>
+    </body>
+</html>
